@@ -13,7 +13,7 @@ const DAKHAOSAT_DIR = path.join(__dirname, 'DAKHAOSAT');
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Ensure data directory exists
 if (!fs.existsSync(DAKHAOSAT_DIR)){
