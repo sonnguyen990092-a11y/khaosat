@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Khảo Sát Ý Kiến Nhân Viên Y Tế</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <h1>PHIẾU KHẢO SÁT Ý KIẾN NHÂN VIÊN Y TẾ</h1>
+            <p>Đánh giá sự hài lòng về bệnh viện</p>
+        </header>
+
+        <form id="surveyForm" class="survey-form">
+            <!-- PHẦN I: THÔNG TIN NGƯỜI ĐIỀN PHIẾU -->
+            <section class="form-section">
+                <h2>I. THÔNG TIN NGƯỜI ĐIỀN PHIẾU</h2>
+                
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label>A1. Giới tính <span class="required">*</span></label>
+                        <div class="radio-group row-radio">
+                            <label><input type="radio" name="gender" value="Nam" required> 1. Nam</label>
+                            <label><input type="radio" name="gender" value="Nữ" required> 2. Nữ</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="age">A2. Tuổi <span class="required">*</span></label>
+                        <input type="number" id="age" name="age" min="18" max="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>A3. Chuyên môn đào tạo chính <span class="required">*</span></label>
+                    <div class="radio-group columns-2">
+                        <label><input type="radio" name="profession" value="Bác sỹ" required> 1. Bác sỹ</label>
+                        <label><input type="radio" name="profession" value="Dược sỹ" required> 2. Dược sỹ</label>
+                        <label><input type="radio" name="profession" value="Điều dưỡng, hộ sinh" required> 3. Điều dưỡng, hộ sinh</label>
+                        <label><input type="radio" name="profession" value="Kỹ thuật viên" required> 4. Kỹ thuật viên</label>
+                        <label class="has-other">
+                            <input type="radio" name="profession" value="Khác" required> 5. Khác
+                            <input type="text" name="profession_other" class="other-input" placeholder="Ghi rõ...">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>A4. Bằng cấp cao nhất của Ông/Bà <span class="required">*</span></label>
+                    <div class="radio-group columns-3">
+                        <label><input type="radio" name="degree" value="Trung cấp" required> 1. Trung cấp</label>
+                        <label><input type="radio" name="degree" value="Cao đẳng" required> 2. Cao đẳng</label>
+                        <label><input type="radio" name="degree" value="Đại học" required> 3. Đại học</label>
+                        <label><input type="radio" name="degree" value="Cao học, CKI" required> 4. Cao học, CKI</label>
+                        <label><input type="radio" name="degree" value="Tiến sỹ, CKII" required> 5. Tiến sỹ, CKII</label>
+                        <label class="has-other">
+                            <input type="radio" name="degree" value="Khác" required> 6. Khác
+                            <input type="text" name="degree_other" class="other-input" placeholder="Ghi rõ...">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="years_in_health">A5. Số năm công tác trong ngành Y (từ 1 năm 6 tháng sẽ ghi là 2)<span class="required">*</span></label>
+
+                        <input type="number" id="years_in_health" name="years_in_health" min="0" max="600" required>
+                    </div>
+
+    
+                </div>
+                <div class="form-group col-md-6">
+                        <label for="years_in_hospital">A6. Số năm công tác tại bệnh viện hiện nay (dưới 1 năm 5 tháng sẽ ghi là 1)<span class="required">*</span></label>
+                        <input type="number" id="years_in_hospital" name="years_in_hospital" min="0" max="600" required>
+                    </div>
+
+                <div class="form-group">
+                    <label>A7. Vị trí công tác hiện tại <span class="required">*</span></label>
+                    <div class="radio-group columns-2">
+                        <label><input type="radio" name="position" value="Lãnh đạo bệnh viện" required> 1. Lãnh đạo bệnh viện</label>
+                        <label><input type="radio" name="position" value="Trưởng khoa/phòng/ trung tâm" required> 2. Trưởng khoa/phòng/ trung tâm</label>
+                        <label><input type="radio" name="position" value="Phó khoa/phòng" required> 3. Phó khoa/phòng</label>
+                        <label><input type="radio" name="position" value="NV biên chế/hợp đồng dài hạn" required> 4. NV biên chế/hợp đồng dài hạn</label>
+                        <label><input type="radio" name="position" value="Hợp đồng ngắn hạn" required> 5. Hợp đồng ngắn hạn</label>
+                        <label class="has-other">
+                            <input type="radio" name="position" value="Khác" required> 6. Khác
+                            <input type="text" name="position_other" class="other-input" placeholder="Ghi rõ...">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>A8. Phạm vi hoạt động chuyên môn <span class="required">*</span></label>
+                    <div class="radio-group columns-3">
+                        <label><input type="radio" name="department" value="Khối hành chính" required> 1. Khối hành chính</label>
+                        <label><input type="radio" name="department" value="Cận lâm sàng" required> 2. Cận lâm sàng</label>
+                        <label><input type="radio" name="department" value="Nội" required> 3. Nội</label>
+                        <label><input type="radio" name="department" value="Ngoại" required> 4. Ngoại</label>
+                        <label><input type="radio" name="department" value="Sản" required> 5. Sản</label>
+                        <label><input type="radio" name="department" value="Nhi" required> 6. Nhi</label>
+                        <label><input type="radio" name="department" value="Truyền nhiễm" required> 7. Truyền nhiễm</label>
+                        <label><input type="radio" name="department" value="Chuyên khoa lẻ" required> 8. Chuyên khoa lẻ (mắt, TMH, RHM…)</label>
+                        <label><input type="radio" name="department" value="Các khoa không trực tiếp KCB" required> 9. Các khoa không trực tiếp KCB</label>
+                        <label><input type="radio" name="department" value="Dược" required> 10. Dược</label>
+                        <label><input type="radio" name="department" value="Dự phòng" required> 11. Dự phòng</label>
+                        <label class="has-other">
+                            <input type="radio" name="department" value="Khác" required> 12. Khác
+                            <input type="text" name="department_other" class="other-input" placeholder="Ghi rõ...">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>A9. Anh/Chị có được phân công kiêm nhiệm nhiều công việc không? <span class="required">*</span></label>
+                    <div class="radio-group columns-3">
+                        <label><input type="radio" name="multiple_roles" value="Không kiêm nhiệm" required> 1. Không kiêm nhiệm</label>
+                        <label><input type="radio" name="multiple_roles" value="Kiêm nhiệm 2 công việc" required> 2. Kiêm nhiệm 2 công việc</label>
+                        <label><input type="radio" name="multiple_roles" value="Kiêm nhiệm từ 3 công việc trở lên" required> 3. Kiêm nhiệm từ 3 công việc trở lên</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="night_shifts">A10. Trung bình Anh/Chị trực mấy lần trong một tháng? <span class="required">*</span></label>
+                    <input type="number" id="night_shifts" name="night_shifts" min="0" max="31" required style="width: 150px; display: inline-block;"> lần
+                </div>
+            </section>
+
+            <!-- PHẦN II: ĐÁNH GIÁ SỰ HÀI LÒNG -->
+            <section class="form-section">
+                <h2>II. ĐÁNH GIÁ SỰ HÀI LÒNG VỀ BỆNH VIỆN</h2>
+                <div class="instruction">
+                    <p>Quý đồng nghiệp đánh dấu vào mức độ từ 1 đến 5, tương ứng với mức độ hài lòng hoặc nhận xét từ rất kém đến rất tốt cho từng câu hỏi dưới đây:</p>
+                    <ul class="scale-legend">
+                        <li><span class="badge badge-1">1</span> Rất không hài lòng / Rất kém</li>
+                        <li><span class="badge badge-2">2</span> Không hài lòng / Kém</li>
+                        <li><span class="badge badge-3">3</span> Bình thường / Trung bình</li>
+                        <li><span class="badge badge-4">4</span> Hài lòng / Tốt</li>
+                        <li><span class="badge badge-5">5</span> Rất hài lòng / Rất tốt</li>
+                    </ul>
+                </div>
+
+                <div class="evaluation-table-container">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th class="col-content">Nội dung</th>
+                                <th class="col-rating">1</th>
+                                <th class="col-rating">2</th>
+                                <th class="col-rating">3</th>
+                                <th class="col-rating">4</th>
+                                <th class="col-rating">5</th>
+                            </tr>
+                        </thead>
+                        <tbody id="evaluation-body">
+                            <!-- Rows will be populated by Javascript to keep HTML clean -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- PHẦN III: Ý KIẾN KHÁC -->
+            <section class="form-section">
+                <h2>III. Ý KIẾN HOẶC ĐỀ XUẤT KHÁC</h2>
+                <div class="form-group">
+                    <label for="suggestions">G. Anh/Chị có ý kiến hoặc đề xuất nào khác với Bộ Y tế và lãnh đạo bệnh viện?</label>
+                    <textarea id="suggestions" name="suggestions" rows="6" placeholder="Nhập ý kiến của bạn..."></textarea>
+                </div>
+            </section>
+
+            <div class="form-footer">
+                <p class="thanks-note">Xin chân thành cảm ơn sự nhiệt tình cung cấp thông tin của Quý đồng nghiệp!</p>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Gửi Phiếu Khảo Sát</span>
+                    <span class="loader hidden"></span>
+                </button>
+                <div id="submitMessage" class="submit-message hidden"></div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
